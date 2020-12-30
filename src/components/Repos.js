@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GithubContext } from '../context/context'
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts'
+import { Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts'
+// import { ExampleChart, chartData } from './Charts/ExampleChart'
+
 const Repos = () => {
   const { repos } = React.useContext(GithubContext)
   const data = repos.reduce((total, repo) => {
@@ -35,20 +37,6 @@ const Repos = () => {
     .sort((a, b) => b.value - a.value)
     .slice(0, 5)
 
-  const chartData = [
-    {
-      label: 'HTML',
-      value: '13',
-    },
-    {
-      label: 'CSS',
-      value: '83',
-    },
-    {
-      label: 'Javascript',
-      value: '80',
-    },
-  ]
   return (
     <section className='section'>
       <Wrapper className='section-center'>

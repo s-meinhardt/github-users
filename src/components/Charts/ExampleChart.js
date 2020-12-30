@@ -47,3 +47,18 @@ const ChartComponent = ({ data }) => {
 }
 
 export default ChartComponent
+
+export const chartData = [
+  {
+    label: 'HTML',
+    value: '13',
+  },
+  {
+    label: 'CSS',
+    value: '83',
+  },
+  {
+    label: 'Javascript',
+    value: '80',
+  },
+]
