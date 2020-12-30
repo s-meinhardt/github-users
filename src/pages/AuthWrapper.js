@@ -16,7 +16,7 @@ function AuthWrapper({ children }) {
         <h1>{error.message}</h1>
       </Wrapper>
     )
-  return <Wrapper>{children}</Wrapper>
+  return { children }
 }
 
 const Wrapper = styled.section`

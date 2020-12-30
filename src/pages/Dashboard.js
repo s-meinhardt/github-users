@@ -1,9 +1,12 @@
 import React from 'react'
+import { withAuthenticationRequired } from '@auth0/auth0-react'
 import { Info, Repos, User, Search, Navbar } from '../components'
 import loadingImage from '../images/preloader.gif'
+
 import { GithubContext } from '../context/context'
 const Dashboard = () => {
   const { isLoading } = React.useContext(GithubContext)
+
   if (isLoading)
     return (
       <main>
@@ -24,4 +27,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default withAuthenticationRequired(Dashboard)

@@ -13,7 +13,7 @@ const Navbar = () => {
           Welcome, <strong>{user.name.toUpperCase()}</strong>
         </h4>
       )}
-      <button onClick={() => logout({ returnTo: window.location.origin })}>logout</button>
+      <button onClick={() => logout({ returnTo: `${window.location.origin}/login` })}>logout</button>
     </Wrapper>
   )
 }
